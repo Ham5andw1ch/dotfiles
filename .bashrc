@@ -146,10 +146,4 @@ export PS1="\[$(tput setaf 2)\]\u@\h:\[$(tput setaf 4)\]\W\[$(tput setaf 7)\]$ \
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 
-# Base16 Shell
-BASE16_SHELL="$HOME/.config/base16-shell/"
-[ -n "$PS1" ] && \
-    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-        eval "$("$BASE16_SHELL/profile_helper.sh")"
-
 eval $(thefuck --alias)
