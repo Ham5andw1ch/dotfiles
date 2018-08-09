@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/donov/Pictures/maki.png",
+    "alpha": "100",
+    "special": {
+        "background": "#161a1e",
+        "foreground": "#e2d8d6",
+        "cursor": "#e2d8d6"
+    },
+    "colors": {
+        "color0": "#161a1e",
+        "color1": "#9F696D",
+        "color2": "#DD575F",
+        "color3": "#A37E81",
+        "color4": "#768D8B",
+        "color5": "#A0A5A5",
+        "color6": "#E4A1A0",
+        "color7": "#e2d8d6",
+        "color8": "#9e9795",
+        "color9": "#9F696D",
+        "color10": "#DD575F",
+        "color11": "#A37E81",
+        "color12": "#768D8B",
+        "color13": "#A0A5A5",
+        "color14": "#E4A1A0",
+        "color15": "#e2d8d6"
+    }
+}
