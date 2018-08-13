@@ -60,7 +60,6 @@ modules-left = i3
 modules-center = xwindow
 modules-right = filesystem eth1 wlan0 memory cpu temperature pulseaudio date
 tray-padding = 0
-tray-position = right
 
 ;tray-background = #0063ff
 

@@ -145,5 +145,5 @@ alias vim="nvim"
 export PS1="\[$(tput setaf 2)\]\u@\h:\[$(tput setaf 4)\]\W\[$(tput setaf 7)\]$ \[$(tput sgr0)\]"
 export VISUAL=nvim
 export EDITOR="$VISUAL"
-
+alias tmux="tmux new bash"
 eval $(thefuck --alias)
