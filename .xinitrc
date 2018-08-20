@@ -7,7 +7,7 @@ xss-lock -- "i3BlurLock"&
 
 systemctl --user import-environment DISPLAY
 
-feh --bg-scale ~/Pictures/wallpaper.png
+feh --bg-scale ~/Pictures/maki.png
 
 exec startdwm
 

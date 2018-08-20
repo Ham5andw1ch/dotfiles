@@ -1,6 +1,6 @@
 /* See LICENSE file for copyright and license details. */
 #include <X11/XF86keysym.h>
-#include "themes/base16-ocean.h"
+
 
 /* appearance */
 static const unsigned int borderpx  = 3;        /* border pixel of windows */
@@ -16,8 +16,20 @@ static const int horizpadbar        = 5;        /* horizontal padding for status
 static const int vertpadbar         = 5;        /* vertical padding for statusbar */
 //static const char barheight[]       = "24";     /* dmenu line height */
 static const char *fonts[]          = { "Noto Mono:size=10:width=1", "Font Awesome 5 Brands:style=Regular:size=10" , "Font Awesome 5 Free:style=Solid:size=10", "Material Design Icons:style=regular:size=12" , "Material Icons:style=regular:size=12" };
-static const char dmenufont[]       = "Noto Mono:size=9:width=1";
+static const char dmenufont[]       = "Noto Mono:size=6:width=1";
 
+static const char col_nmfg[]	= "#889190";
+static const char col_nmbg[]	= "#2E3237";
+static const char col_nmbd[]	= "#2E3237";
+static const char col_selfg[]	= "#dfdfdf";
+static const char col_selbg[]	= "#2E3237";
+static const char col_selbd[]	= "#2E3237";
+
+
+static const char *colors[][3] = {
+	[SchemeNorm] = { col_nmfg, col_nmbg, col_nmbd},
+	[SchemeSel]  = { col_selfg, col_selbg, col_selbd},
+};
 
 /* tagging */
 static const char *tags[] = { "", "", "" , "" , "" , "", };
@@ -61,9 +73,9 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[]      = { "dmenu_run"};
 static const char *termcmd[]       = { "st", NULL };
-static const char *mutecmd[]       = { "amixer", "-q", "set", "Master", "toggle", NULL };
-static const char *volupcmd[]      = { "amixer", "-q", "set", "Master", "5%+", NULL };
-static const char *voldncmd[]      = { "amixer", "-q", "set", "Master", "5%-", NULL };
+static const char *mutecmd[]       = { "pactl", "set-sink-mute", "0", "toggle", NULL };
+static const char *volupcmd[]      = { "pactl", "set-sink-volume", "0", "+5%", NULL };
+static const char *voldncmd[]      = { "pactl", "set-sink-volume", "0", "-5%", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
 static const char *scrotcmd[]	   = { "scrot", "--exec", "mv -v $f ~/Pictures/Screenshots/", NULL };
