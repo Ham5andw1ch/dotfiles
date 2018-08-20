@@ -1,5 +1,5 @@
 #!/bin/bash
-CHOICE="$(echo -e "Exit\nLock\nShutdown\nRestart" | dmenu -fn 'Noto Mono:style=Regular:size=10' -nb '#2e3237' -sf '#2e3237' -sb '#889190' -nf '#dfdfdf')"
+CHOICE="$(echo -e "Exit\nLock\nShutdown\nRestart" | dmenu -fn 'Noto Mono:style=Regular:size=12' -nb '#2e3237' -sf '#2e3237' -sb '#889190' -nf '#dfdfdf')"
 case  $CHOICE  in 
 	"E"|"e"|"Exit")
 		killall xinit
