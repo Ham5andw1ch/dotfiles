@@ -1,0 +1,12 @@
+# relaunch DWM if the binary changes, otherwise bail
+
+compton -CGb -o 0 --blur-background --blur-method kawase --backend glx
+exec nm-applet &
+
+while true
+do
+       (i3status | while read LINE; do xsetroot -name "$LINE"; done) &
+	dwm
+done
+
+

@@ -56,9 +56,9 @@ font-1 = Font Awesome 5 Brands:style=Regular:size=10;2
 font-2 = Font Awesome 5 Free:style=Solid:size=10;2
 font-3 = Material Design Icons:style=regular:size=12;3
 font-4 = Material Icons:style=regular:size=12;3
-modules-left = i3
+modules-left =i3
 modules-center = xwindow
-modules-right = filesystem eth1 wlan0 memory cpu temperature pulseaudio date
+modules-right = filesystem filesystem1 eth1 wlan0 memory cpu temperature pulseaudio date
 tray-padding = 0
 
 ;tray-background = #0063ff
@@ -66,7 +66,6 @@ tray-padding = 0
 ;wm-restack = bspwm
 ;wm-restack = i3
 
-;override-redirect = true
 
 ;scroll-up = bspwm-desknext
 ;scroll-down = bspwm-deskprev
@@ -112,7 +111,7 @@ font-3 = Material Design Icons:style=regular:size=12;3
 font-4 = Material Icons:style=regular:size=12;3
 modules-left = i3
 modules-center = xwindow
-modules-right = filesystem eth1 wlan0 memory cpu temperature pulseaudio date
+modules-right = filesystem filesystem1 eth1 wlan0 memory cpu temperature pulseaudio date
 tray-padding = 0
 tray-position = right
 
@@ -121,7 +120,6 @@ tray-position = right
 ;wm-restack = bspwm
 ;wm-restack = i3
 
-;override-redirect = true
 
 ;scroll-up = bspwm-desknext
 ;scroll-down = bspwm-deskprev
@@ -158,10 +156,19 @@ label-indicator-underline = ${colors.secondary}
 type = internal/fs
 interval = 25
 mount-0 = /
-f
+
 label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
+[module/filesystem1]
+type = internal/fs
+interval = 25
+mount-0 = /mnt/data
+
+label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.foreground-alt}
+
 
 [module/bspwm]
 type = internal/bspwm
@@ -426,6 +433,26 @@ animation-charging-5 = 
 animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-framerate = 1000
 
+
+
+[module/ewmh]
+type = internal/xworkspaces
+
+; Only show workspaces defined on the same output as the bar
+;
+; Useful if you want to show monitor specific workspaces
+; on different bars
+;
+; Default: false
+pin-workspaces = true
+
+; Create click handler used to focus desktop
+; Default: true
+enable-click = false
+
+; Create scroll handlers used to cycle desktops
+; Default: true
+enable-scroll = false
 
 [module/temperature]
 type = internal/temperature
