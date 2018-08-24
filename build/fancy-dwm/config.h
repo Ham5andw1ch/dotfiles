@@ -59,7 +59,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[]      = { "dmenu_run", "-fn" , "Noto Mono-10", "-nb", "#2e3237", "-sf", "#2e3237",  "-sb", "#889190", "-nf", "#dfdfdf", NULL};
+static const char *dmenucmd[]      = { "dmenu_run", "-fn" , "Noto Mono-12", "-nb", "#2e3237", "-sf", "#2e3237",  "-sb", "#889190", "-nf", "#dfdfdf", NULL};
 static const char *termcmd[]       = { "st", NULL };
 static const char *mutecmd[]       = { "pactl", "set-sink-mute", "0", "toggle", NULL };
 static const char *volupcmd[]      = { "pactl", "set-sink-volume", "0", "+5%", NULL };
