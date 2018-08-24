@@ -2,15 +2,19 @@
 
 case $1 in
 	"1")	
-		maim  ~/screenshots/$(date +%s).png
+		shotgun ~/screenshots/$(date +%s).png
 		;;
 	"2")
-		maim -s ~/screenshots/$(date +%s).png
+		 set -e
+		 sel=$(slop -f "-i %i -g %g")
+		 shotgun $sel ~/screenshots/$(date +%s).png
 		;;
 	"3")
-		maim | xclip -selection clipboard -target image/png
+		shotgun | xclip -selection clipboard -target image/png
 		;;
 	"4")
-		maim -s | xclip -selection clipboard -target image/png
+		set -e
+		sel=$(slop -f "-i %i -g %g")
+		shotgun $sel | xclip -selection clipboard -target image/png
 		;;
 esac
