@@ -1,0 +1,16 @@
+#!/bin/bash
+
+case $1 in
+	"1")	
+		maim  ~/screenshots/$(date +%s).png
+		;;
+	"2")
+		maim -s ~/screenshots/$(date +%s).png
+		;;
+	"3")
+		maim | xclip -selection clipboard -target image/png
+		;;
+	"4")
+		maim -s | xclip -selection clipboard -target image/png
+		;;
+esac

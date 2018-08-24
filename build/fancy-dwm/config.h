@@ -1,5 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 #include <X11/XF86keysym.h>
+#include "themes/maki.h"
+
 
 
 /* appearance */
@@ -15,22 +17,8 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const int horizpadbar        = 5;        /* horizontal padding for statusbar */
 static const int vertpadbar         = 5;        /* vertical padding for statusbar */
 //static const char barheight[]       = "24";     /* dmenu line height */
-static const char *fonts[]          = { "Noto Mono:size=10:width=1", "Font Awesome 5 Brands:style=Regular:size=10" , "Font Awesome 5 Free:style=Solid:size=10", "Material Design Icons:style=regular:size=12" , "Material Icons:style=regular:size=12" };
+static const char *fonts[]          = { "Noto Mono:size=10:width=1", "Symbola:style=Regular:size=10", "Font Awesome 5 Brands:style=Regular:size=10" , "Font Awesome 5 Free:style=Solid:size=10", "Material Design Icons:style=regular:size=12" , "Material Icons:style=regular:size=12" };
 static const char dmenufont[]       = "Noto Mono:size=6:width=1";
-
-static const char col_nmfg[]	= "#889190";
-static const char col_nmbg[]	= "#2E3237";
-static const char col_nmbd[]	= "#2E3237";
-static const char col_selfg[]	= "#dfdfdf";
-static const char col_selbg[]	= "#2E3237";
-static const char col_selbd[]	= "#2E3237";
-
-
-static const char *colors[][3] = {
-	[SchemeNorm] = { col_nmfg, col_nmbg, col_nmbd},
-	[SchemeSel]  = { col_selfg, col_selbg, col_selbd},
-};
-
 /* tagging */
 static const char *tags[] = { "", "", "" , "" , "" , "", };
 
@@ -52,10 +40,10 @@ static const Layout layouts[] = {
 	/* symbol       arrange function */
 	{ "[]=",       tile },    /* first entry is default */
 	{ "><>",      NULL },    /* no layout function means floating behavior */
-	{ "[M}",      monocle },
-	//{ " ﰀ ",      bstack },
-	//{ "  ",      bstackhoriz },
-    //{ "  ",      clean },
+	{ "[M]",      monocle },
+	{ "TTT",      bstack },
+	{ "===",      bstackhoriz },
+        { "![]",      clean },
 };
 
 /* key definitions */
@@ -78,10 +66,10 @@ static const char *volupcmd[]      = { "pactl", "set-sink-volume", "0", "+5%", N
 static const char *voldncmd[]      = { "pactl", "set-sink-volume", "0", "-5%", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
-static const char *scrotcmd[]	   = { "scrot", "--exec", "mv -v $f ~/Pictures/Screenshots/", NULL };
-//static const char *scrotselcmd[]	   = 
-//static const char *scrotclipcmd[]	   = 	
-static const char *scrotselclipcmd[]	   = {"scrot", "-s", "--exec", "xclip -selection clipboard -target image/png -i $f", NULL};	
+static const char *scrotcmd[]	   	   = {"superMaim", "1",	NULL};
+static const char *scrotselcmd[]	   = {"superMaim", "2",	NULL};
+static const char *scrotclipcmd[]	   = {"superMaim", "3",	NULL};
+static const char *scrotselclipcmd[]	   = {"superMaim", "4", NULL};	
 static const char *quitcmd[]= {"powerDMenu.sh",NULL};
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -129,8 +117,11 @@ static Key keys[] = {
     	{ False,                        XF86XK_AudioMute,          spawn,          {.v = mutecmd } },
 	{ False,                        XF86XK_AudioRaiseVolume,   spawn,          {.v = volupcmd } },
 	{ False,                        XF86XK_AudioLowerVolume,   spawn,          {.v = voldncmd } },
-	{ False,                        XK_Print,                  spawn,          {.v = scrotcmd } },
-	{MODKEY|ShiftMask,		XK_Print,		   spawn,          {.v = scrotselclipcmd } },
+	{ False,                        XK_Print,                  spawn,          {.v = scrotclipcmd } },
+	{ShiftMask,			XK_Print,		   spawn,          {.v = scrotselclipcmd } },
+	{MODKEY,                        XK_Print,                  spawn,          {.v = scrotcmd } },
+	{MODKEY|ShiftMask,			XK_Print,		   spawn,          {.v = scrotselcmd } },
+	
 	{MODKEY|ShiftMask,		XK_r, 			   quit,           {0} },
 };
 
