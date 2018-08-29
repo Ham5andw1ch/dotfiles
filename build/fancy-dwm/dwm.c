@@ -844,7 +844,7 @@ drawbar(Monitor *m)
 		stw = getsystraywidth();
 
 	/* draw status first so it can be overdrawn by tags later */
-	if (m == selmon) { /* status is only drawn on selected monitor */
+	if (m == m) { /* status is only drawn on selected monitor */
 		drw_setscheme(drw, scheme[SchemeNorm]);
 		sw = drw_get_width(drw, LENGTH(colors), stext);
 		drw_colored_text(drw, scheme, LENGTH(colors), m->ww - sw - stw, 0, sw, bh, 0, stext);
@@ -2338,7 +2338,7 @@ updatestatus(void)
 {
 	if (!gettextprop(root, XA_WM_NAME, stext, sizeof(stext)))
 		strcpy(stext, "dwm-"VERSION);
-	drawbar(selmon);
+	drawbars();
 	updatesystray();
 }
 
