@@ -1,0 +1,28 @@
+{
+    "wallpaper": "Minami.Kotori.full.2172247.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#231f1b",
+        "foreground": "#c8c7c6",
+        "cursor": "#c8c7c6"
+    },
+    "colors": {
+        "color0": "#231f1b",
+        "color1": "#ad7d64",
+        "color2": "#c3a887",
+        "color3": "#0cb851",
+        "color4": "#71abc7",
+        "color5": "#a8b1bc",
+        "color6": "#5c46b2",
+        "color7": "#c8c7c6",
+        "color8": "#5a5754",
+        "color9": "#ad7d64",
+        "color10": "#c3a887",
+        "color11": "#0cb851",
+        "color12": "#71abc7",
+        "color13": "#a8b1bc",
+        "color14": "#5c46b2",
+        "color15": "#c8c7c6"
+    }
+}

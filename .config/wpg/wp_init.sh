@@ -1,2 +1,2 @@
 #!/bin/bash
-wpg -rs maki.png maki.png
+wpg -rs proxy.duckduckgo.com.jpg proxy.duckduckgo.com.jpg

@@ -1,0 +1,28 @@
+{
+    "wallpaper": "proxy.duckduckgo.com.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#231f1d",
+        "foreground": "#c8c7c6",
+        "cursor": "#c8c7c6"
+    },
+    "colors": {
+        "color0": "#231f1d",
+        "color1": "#c3bdbc",
+        "color2": "#c5a898",
+        "color3": "#ab9670",
+        "color4": "#a3a49d",
+        "color5": "#7ec199",
+        "color6": "#5caa7f",
+        "color7": "#c8c7c6",
+        "color8": "#5a5755",
+        "color9": "#c3bdbc",
+        "color10": "#c5a898",
+        "color11": "#ab9670",
+        "color12": "#a3a49d",
+        "color13": "#7ec199",
+        "color14": "#5caa7f",
+        "color15": "#c8c7c6"
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "wallpaper": "under_night_in_birth__linne_by_nightfall1007-d8kam2j.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#231f10",
+        "foreground": "#c8c7c3",
+        "cursor": "#c8c7c3"
+    },
+    "colors": {
+        "color0": "#231f10",
+        "color1": "#aa7e46",
+        "color2": "#c6a72c",
+        "color3": "#a7b2c5",
+        "color4": "#2f4ca9",
+        "color5": "#0b19aa",
+        "color6": "#756faa",
+        "color7": "#c8c7c3",
+        "color8": "#5a574b",
+        "color9": "#aa7e46",
+        "color10": "#c6a72c",
+        "color11": "#a7b2c5",
+        "color12": "#2f4ca9",
+        "color13": "#0b19aa",
+        "color14": "#756faa",
+        "color15": "#c8c7c3"
+    }
+}

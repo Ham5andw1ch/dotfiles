@@ -1,0 +1,28 @@
+{
+    "wallpaper": "maki.png",
+    "alpha": "100",
+
+    "special": {
+        "background": "#1d1f1f",
+        "foreground": "#c6c7c7",
+        "cursor": "#c6c7c7"
+    },
+    "colors": {
+        "color0": "#1d1f1f",
+        "color1": "#c5bebb",
+        "color2": "#95a6a8",
+        "color3": "#7e96aa",
+        "color4": "#ba646d",
+        "color5": "#be3e48",
+        "color6": "#c09294",
+        "color7": "#c6c7c7",
+        "color8": "#555757",
+        "color9": "#c5bebb",
+        "color10": "#95a6a8",
+        "color11": "#7e96aa",
+        "color12": "#ba646d",
+        "color13": "#be3e48",
+        "color14": "#c09294",
+        "color15": "#c6c7c7"
+    }
+}
