@@ -170,26 +170,26 @@ client.focused          #dd4444 #dd4444 #ffffff #dd4444 #dd4444
 bindsym $mod+r mode "resize"
 
 #Start i3bar
-bar {
-	status_command    i3status
-	position          bottom
-	#workspace_buttons yes
-	font pango: Noto Sans , Font Awesome 5 Brands , Font Awesome 5 Free, Material Design Icons , Mateiral Icons 10
-	
-	#font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-	
-	colors {
-		background #2E3237
-		statusline #dfdfdf
-
-		focused_workspace  #2E3237 #2E3237 #dfdfdf
-	        active_workspace   #2E3237 #2E3237 #dfdfdf
-	        inactive_workspace #2E3237 #2E3237 #889190
-	        urgent_workspace   #2E3237 #2E3237 #bd2c40
-	}
-}
+#bar {
+#	status_command    i3status
+#	position          bottom
+#	#workspace_buttons yes
+#	font pango: Noto Sans , Font Awesome 5 Brands , Font Awesome 5 Free, Material Design Icons , Mateiral Icons 10
+#	
+#	#font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+#	
+#	colors {
+#		background #2E3237
+#		statusline #dfdfdf
+#
+#		focused_workspace  #2E3237 #2E3237 #dfdfdf
+#	        active_workspace   #2E3237 #2E3237 #dfdfdf
+#	        inactive_workspace #2E3237 #2E3237 #889190
+#	        urgent_workspace   #2E3237 #2E3237 #bd2c40
+#	}
+#}
 #Start Polybar
-#exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 #My commands
 #==============================================================
@@ -209,8 +209,6 @@ exec --no-startup-id compton -CGb -o 0 --blur-background --blur-method kawase --
 #Rename Workspaces With Icons
 exec_always ~/.config/i3/autoname_workspaces.py &
 
-#Background
-exec --no-startup-id feh --bg-scale ~/Pictures/maki.png
 
 #NM
 exec nm-applet
@@ -219,4 +217,4 @@ exec nm-applet
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound

@@ -5,19 +5,19 @@
 
 
 /* appearance */
-static const unsigned int borderpx  = 3;        /* border pixel of windows */
+static const unsigned int borderpx  = 0;        /* border pixel of windows */
 static const unsigned int gappx     = 10;        /* gap pixel between windows */
 static const unsigned int snap      = 15;       /* snap pixel */
-static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
-static const unsigned int systrayspacing = 9;   /* systray spacing */
+static const unsigned int systraypinning = 1;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
+static const unsigned int systrayspacing = 3;   /* systray spacing */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
 static const int showsystray        = 1;     /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
 static const int horizpadbar        = 5;        /* horizontal padding for statusbar */
-static const int vertpadbar         = 5;        /* vertical padding for statusbar */
-//static const char barheight[]       = "24";     /* dmenu line height */
-static const char *fonts[]          = { "Noto Mono:size=10:width=1", "Symbola:style=Regular:size=10", "Font Awesome 5 Brands:style=Regular:size=10" , "Font Awesome 5 Free:style=Solid:size=10", "Material Design Icons:style=regular:size=12" , "Material Icons:style=regular:size=12" };
+static const int vertpadbar         = 8;        /* vertical padding for statusbar */
+static const char barheight[]       = "24";     /* dmenu line height */
+static const char *fonts[]          = { "Hack-Regular:size=10:width=1", "Symbola:style=Regular:size=10", "Font Awesome 5 Brands:style=Regular:size=10" , "Font Awesome 5 Free:style=Solid:size=10", "Material Design Icons:style=regular:size=10" , "Material Icons:style=regular:size=10" };
 static const char dmenufont[]       = "Noto Mono:size=6:width=1";
 /* tagging */
 static const char *tags[] = { "", "", "" , "" , "" , "", };

@@ -1,2 +1,2 @@
 #!/bin/bash
-wpg -rs proxy.duckduckgo.com.jpg proxy.duckduckgo.com.jpg
+wpg -rs thumb-1920-858933.jpg thumb-1920-858933.jpg

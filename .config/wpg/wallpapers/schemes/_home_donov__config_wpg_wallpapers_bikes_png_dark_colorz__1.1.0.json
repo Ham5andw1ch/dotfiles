@@ -1,0 +1,28 @@
+{
+    "wallpaper": "bikes.png",
+    "alpha": "100",
+
+    "special": {
+        "background": "#1b191f",
+        "foreground": "#c6c5c7",
+        "cursor": "#c6c5c7"
+    },
+    "colors": {
+        "color0": "#1b191f",
+        "color1": "#575caa",
+        "color2": "#8477aa",
+        "color3": "#a586a3",
+        "color4": "#baacb4",
+        "color5": "#ab6f80",
+        "color6": "#aa394c",
+        "color7": "#c6c5c7",
+        "color8": "#545257",
+        "color9": "#575caa",
+        "color10": "#8477aa",
+        "color11": "#a586a3",
+        "color12": "#baacb4",
+        "color13": "#ab6f80",
+        "color14": "#aa394c",
+        "color15": "#c6c5c7"
+    }
+}

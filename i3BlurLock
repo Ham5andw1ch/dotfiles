@@ -1,4 +1,4 @@
 #!/bin/bash
-scrot -z ~/lock/lock.png
-convert ~/lock/lock.png -blur 18,5 ~/lock/lock.png
+scrot -z /tmp/lock.png
+convert	/tmp/lock.png -blur 18,5 /tmp/lock.png
 i3lock -n
