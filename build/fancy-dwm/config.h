@@ -20,7 +20,7 @@ static const char barheight[]       = "24";     /* dmenu line height */
 static const char *fonts[]          = { "Hack-Regular:size=10:width=1", "Symbola:style=Regular:size=10", "Font Awesome 5 Brands:style=Regular:size=10" , "Font Awesome 5 Free:style=Solid:size=10", "Material Design Icons:style=regular:size=10" , "Material Icons:style=regular:size=10" };
 static const char dmenufont[]       = "Noto Mono:size=6:width=1";
 /* tagging */
-static const char *tags[] = { "", "", "" , "" , "" , "", };
+static const char *tags[] = { "", "", "" , "" , "" , "", };
 
 static const Rule rules[] = {
 	/* xprop(1):
