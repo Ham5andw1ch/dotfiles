@@ -11,16 +11,16 @@ static const unsigned int snap      = 15;       /* snap pixel */
 static const unsigned int systraypinning = 1;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayspacing = 3;   /* systray spacing */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
-static const int showsystray        = 1;     /* 0 means no systray */
+static const int showsystray        = 0;     /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
 static const int horizpadbar        = 5;        /* horizontal padding for statusbar */
 static const int vertpadbar         = 8;        /* vertical padding for statusbar */
 static const char barheight[]       = "24";     /* dmenu line height */
-static const char *fonts[]          = { "Hack-Regular:size=10:width=1", "Symbola:style=Regular:size=10", "Font Awesome 5 Brands:style=Regular:size=10" , "Font Awesome 5 Free:style=Solid:size=10", "Material Design Icons:style=regular:size=10" , "Material Icons:style=regular:size=10" };
+static const char *fonts[]          = { "Hack-Regular:size=8", "Symbola:style=Regular:size=8", "Font Awesome 5 Brands:style=Regular:size=8" , "Font Awesome 5 Free:style=Solid:size=8", "Material Design Icons:style=regular:size=8" , "Material Icons:style=regular:size=8" };
 static const char dmenufont[]       = "Noto Mono:size=6:width=1";
 /* tagging */
-static const char *tags[] = { "", "", "" , "" , "" , "", };
+static const char *tags[] = { "", "", "" , "" , "" , "", "" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -59,7 +59,8 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[]      = { "dmenu_run", "-fn" , "Noto Mono-12", "-nb", "#2e3237", "-sf", "#2e3237",  "-sb", "#889190", "-nf", "#dfdfdf", NULL};
+static const char *dmenucmd[]      = { "dmenu_run", "-fn" , "Hack-Regular:size=10", "-nb", "#2e3237", "-sb", "#2e3237",  "-nf", "#889190", "-sf", "#dfdfdf", NULL};
+static const char *nmdmenucmd[]      = { "networkmanager_dmenu", "-fn" , "Hack-Regular:size=10", "-nb", "#2e3237", "-sb", "#2e3237",  "-nf", "#889190", "-sf", "#dfdfdf", NULL};
 static const char *termcmd[]       = { "st", NULL };
 static const char *mutecmd[]       = { "pactl", "set-sink-mute", "0", "toggle", NULL };
 static const char *volupcmd[]      = { "pactl", "set-sink-volume", "0", "+5%", NULL };
@@ -114,15 +115,15 @@ static Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      spawn,           {.v = quitcmd } },
 	/* custom */
-    	{ False,                        XF86XK_AudioMute,          spawn,          {.v = mutecmd } },
+    { False,                    XF86XK_AudioMute,          spawn,          {.v = mutecmd } },
 	{ False,                        XF86XK_AudioRaiseVolume,   spawn,          {.v = volupcmd } },
 	{ False,                        XF86XK_AudioLowerVolume,   spawn,          {.v = voldncmd } },
 	{ False,                        XK_Print,                  spawn,          {.v = scrotclipcmd } },
-	{ShiftMask,			XK_Print,		   spawn,          {.v = scrotselclipcmd } },
+	{ShiftMask,			            XK_Print,		           spawn,          {.v = scrotselclipcmd } },
 	{MODKEY,                        XK_Print,                  spawn,          {.v = scrotcmd } },
-	{MODKEY|ShiftMask,			XK_Print,		   spawn,          {.v = scrotselcmd } },
-	
-	{MODKEY|ShiftMask,		XK_r, 			   quit,           {0} },
+	{MODKEY,                        XK_w,                      spawn,          {.v = nmdmenucmd } },
+    {MODKEY|ShiftMask,			    XK_Print,		           spawn,          {.v = scrotselcmd } },
+	{MODKEY|ShiftMask,		        XK_r, 			           quit,           {0} },
 };
 
 /* button definitions */

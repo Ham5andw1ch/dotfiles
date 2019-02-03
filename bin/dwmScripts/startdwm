@@ -1,11 +1,10 @@
 # relaunch DWM if the binary changes, otherwise bail
-
-compton -CGb -o 0 -m 1.0 -e 1.0 --backend glx 
 xsetwacom set 18 MapToOutput "1920x1080+1440+0"
+compton -Fbc -I .1 -O .1 --blur-background --backend glx --blur-method kawase
 while true
 do
        (i3status | while read LINE; do xsetroot -name "$LINE"; done) &
-	dwm
+	dwm 
 done
 
 
